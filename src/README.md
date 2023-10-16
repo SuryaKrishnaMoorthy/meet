@@ -110,3 +110,8 @@
 	WHEN the user clicks on charts button;
 	THEN the user should see a chart showing the upcoming events in each city so that I know what events are organized in which city
 	
+## To run
+
+- Fork and clone the repo
+- Run ```npm install``` in the repo
+- Run ```npm strat``` to start
