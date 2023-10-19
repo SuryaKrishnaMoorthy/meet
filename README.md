@@ -109,7 +109,13 @@
 	GIVEN data visualization is visible;
 	WHEN the user clicks on charts button;
 	THEN the user should see a chart showing the upcoming events in each city so that I know what events are organized in which city
-	
+
+
+## Using serverless
+
+Serverless functions is used to handle authorization to access Google Calendar API. AWS Lambda is used to write serverless functions
+
+
 ## To run
 
 - Fork and clone the repo
