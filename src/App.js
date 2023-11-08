@@ -3,6 +3,7 @@ import "./App.css";
 import EventList from "./components/EventList";
 import CitySearch from "./components/CitySearch";
 import { getEvents } from "./api";
+import NumberOfEvents from "./components/NumberOfEvents";
 
 function App() {
   const [events, setEvents] = useState([]);
@@ -19,6 +20,7 @@ function App() {
   return (
     <div className="App">
       <CitySearch />
+      <NumberOfEvents />
       <EventList events={events} />
     </div>
   );
