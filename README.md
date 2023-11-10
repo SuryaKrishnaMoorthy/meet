@@ -24,7 +24,7 @@
 		WHEN the user opens the app;
 		THEN the user should see a list of upcoming events
 
-	- Scenario 2: User should see a list of suggestions wen they search for a city
+	- Scenario 2: User should see a list of suggestions when they search for a city
 		
 		GIVEN the main page is open;
 		WHEN the user starts typing in the city textbox;
