@@ -29,6 +29,28 @@ describe("<CitySearch /> component", () => {
     expect(suggestionList).toHaveClass("suggestions");
   });
 
+  // test("should not render the suggestion list when a user types a city with no event", async () => {
+  //   const user = userEvent.setup();
+  //   const allEvents = await getEvents();
+  //   const allLocations = extractLocations(allEvents);
+  //   CitySearchComponent.rerender(<CitySearch allLocations={allLocations} />);
+
+  //   const cityTextBox = CitySearchComponent.queryByRole("textbox");
+  //   await user.type(cityTextBox, "Paris");
+
+  //   const suggestionListItems = CitySearchComponent.queryAllByRole("listitem");
+
+  //   const suggestions = allLocations
+  //     ? allLocations.filter((location) => {
+  //         return (
+  //           location.toUpperCase().indexOf(cityTextBox.value.toUpperCase()) > -1
+  //         );
+  //       })
+  //     : [];
+
+  //   expect(suggestionListItems.length).toBe(suggestions.length + 1);
+  // });
+
   test("updates list of suggestions correctly when user types in city textbox", async () => {
     const user = userEvent.setup();
     const allEvents = await getEvents();
@@ -59,7 +81,9 @@ describe("<CitySearch /> component", () => {
     const user = userEvent.setup();
     const allEvents = await getEvents();
     const allLocations = extractLocations(allEvents);
-    CitySearchComponent.rerender(<CitySearch allLocations={allLocations} />);
+    CitySearchComponent.rerender(
+      <CitySearch allLocations={allLocations} setCurrentCity={() => {}} />
+    );
 
     const cityTextBox = CitySearchComponent.queryByRole("textbox");
     await user.type(cityTextBox, "Berlin");
