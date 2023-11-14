@@ -19,7 +19,7 @@ const getToken = async (code) => {
     const encodeCode = encodeURIComponent(code);
 
     const response = await fetch(
-      "https://eddjg89okc.execute-api.us-east-2.amazonaws.com/dev/api/tokenT" +
+      "https://eddjg89okc.execute-api.us-east-2.amazonaws.com/dev/api/token" +
         "/" +
         encodeCode
     );
