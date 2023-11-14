@@ -8,12 +8,12 @@ import NumberOfEvents from "./components/NumberOfEvents";
 function App() {
   const [events, setEvents] = useState([]);
   const [allLocations, setAllLocations] = useState([]);
-  const [currentNOE, setCurrentNOE] = useState(32);
+  const [currentNOE, setCurrentNOE] = useState("32");
   const [currentCity, setCurrentCity] = useState("See all cities");
 
   useEffect(() => {
     fetchEvents();
-  }, [currentCity]);
+  }, [currentCity, currentNOE]);
 
   const fetchEvents = async () => {
     const allEvents = await getEvents();
@@ -30,7 +30,7 @@ function App() {
   return (
     <div className="App">
       <CitySearch allLocations={allLocations} setCurrentCity={setCurrentCity} />
-      <NumberOfEvents />
+      <NumberOfEvents currentNOE={currentNOE} setCurrentNOE={setCurrentNOE} />
       <EventList events={events} />
     </div>
   );
