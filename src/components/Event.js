@@ -4,7 +4,7 @@ const Event = ({ event }) => {
   const [showDetails, setShowDetails] = useState(false);
 
   return (
-    <li>
+    <li className="event">
       <h3 className="summary">{event.summary}</h3>
       <p>
         Created on:
@@ -20,7 +20,7 @@ const Event = ({ event }) => {
         </button>
       )}
       {showDetails && (
-        <>
+        <div className="details">
           <p className="description">{event.description}</p>
           <button
             className="hide-details"
@@ -28,7 +28,7 @@ const Event = ({ event }) => {
           >
             Hide
           </button>
-        </>
+        </div>
       )}
     </li>
   );
