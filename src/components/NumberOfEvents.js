@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const NumberOfEvents = ({ setCurrentNOE, currentNOE, setErrorAlert }) => {
   const handleChange = (e) => {
-    if ((e.target.value && isNaN(e.target.value)) || e.target.value < 0) {
+    if ((e.target.value && isNaN(e.target.value)) || e.target.value <= 0) {
       setErrorAlert("Only positive numbers are allowed");
     } else {
       setErrorAlert("");
