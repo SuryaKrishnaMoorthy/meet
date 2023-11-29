@@ -7,6 +7,7 @@ const data = [
   { name: "Group C", value: 300 },
   { name: "Group D", value: 200 },
 ];
+
 const EventGenresChart = ({ events }) => {
   const [data, setData] = useState([]);
 
